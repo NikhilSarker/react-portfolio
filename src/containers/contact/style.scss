@@ -1,0 +1,106 @@
+.contact {
+  &_content {
+    padding: 20px;
+
+    &_headerText {
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1em;
+      letter-spacing: 0.5px;
+      position: relative;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      color: var(--yellow-theme-sub-text-color);
+    }
+    &_form {
+      margin-top: 30px;
+
+      &_controlWrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+        margin-bottom: 30px;
+
+        div {
+          position: relative;
+
+          .nameInput,
+          .emailInput,
+          .descriptionInput {
+            width: 100%;
+            border: 2px solid var(--yellow-theme-main-color);
+            padding: 16px 12px;
+            transition: all 0.5s ease;
+            -webkit-transition: all 0.5s ease;
+            -moz-transition: all 0.5s ease;
+            -ms-transition: all 0.5s ease;
+            -o-transition: all 0.5s ease;
+            position: relative;
+            background-color: transparent;
+            color: var(--yellow-theme-sub-text-color);
+          }
+          .nameLabel,
+          .emailLabel,
+          .descriptionLabel {
+            font-size: 16px;
+            font-weight: 500;
+            position: absolute;
+            top: 15px;
+            left: 12px;
+            transition: all 0.2s ease;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
+            -ms-transition: all 0.2s ease;
+            -o-transition: all 0.2s ease;
+            color: var(--yellow-theme-sub-text-color);
+          }
+          .nameInput:focus,
+          .emailInput:focus,
+          .descriptionInput:focus {
+            outline: none;
+          }
+          .nameInput:focus + .nameLabel,
+          .nameInput:valid + .nameLabel,
+          .emailInput:focus + .emailLabel,
+          .emailInput:valid + .emailLabel,
+          .descriptionInput:focus + .descriptionLabel,
+          .descriptionInput:valid + .descriptionLabel {
+            font-size: 18px;
+            top: -25px;
+            left: 0px;
+          }
+        }
+      }
+      button {
+        cursor: pointer;
+        padding: 10px 50px;
+        font-size: 2rem;
+        background: transparent;
+        color: var(--yellow-theme-main-color);
+        border: 1.5px solid var(--yellow-theme-main-color);
+        font-weight: 500;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+
+        &:hover {
+          color: #000000;
+          background: var(--yellow-theme-main-color);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contact_content_form {
+    text-align: center;
+
+    &_controlWrapper {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}
